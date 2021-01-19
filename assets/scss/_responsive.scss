@@ -1,0 +1,27 @@
+/*$breakpoint-xs: 360px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 1023px;
+$breakpoint-lg: 1360px;
+$breakpoint-xl: 1920px;*/
+
+$breakpoint-xs: 360px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
+  #crecimiento{
+    h2{
+      font-size: 2.1rem;
+    }
+    h3{
+      font-size: 2.8rem;
+    }
+    .p-text-footer{
+      p{
+        font-size: 1.6rem;
+      }
+    } 
+  }
+}

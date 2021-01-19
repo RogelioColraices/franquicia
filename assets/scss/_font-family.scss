@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'Segoeui';
+	src: url('../fonts/seguisb/segoeui/segoeui.eot');
+	src: local('☺'), url('../fonts/segoeui/segoeui.woff') format('woff'), url('../fonts/segoeui/segoeui.ttf') format('truetype'), url('../fonts/segoeui/segoeui.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Segoeuib';
+	src: url('../fonts/segoeuib/segoeuib.eot');
+	src: local('☺'), url('../fonts/segoeuib/segoeuib.woff') format('woff'), url('../fonts/segoeuib/segoeuib.ttf') format('truetype'), url('../fonts/segoeuib/segoeuib.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Seguisb';
+	src: url('../fonts/seguisb/seguisb.eot');
+	src: local('☺'), url('../fonts/seguisb/seguisb.woff') format('woff'), url('../fonts/seguisb/seguisb.ttf') format('truetype'), url('../fonts/seguisb/seguisb.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+$segoeui: 'Segoeui';
+$segoeuiBold: 'Segoeuib';
+$seguiSB: 'Seguisb';

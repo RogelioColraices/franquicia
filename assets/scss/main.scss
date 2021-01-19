@@ -1,0 +1,412 @@
+@import "fonts";
+@import "font-family";
+@import "colors";
+
+@mixin text-shadow {
+  text-shadow: 0px 0px 3px rgba(13, 13, 13, 40%);
+}
+@mixin text-shadow-color {
+  text-shadow: 1px 0px 12px rgba(109, 198, 220, 1);
+}
+@mixin sombra-shadow($shadow-color, $ShadowP: false) {
+  @if $ShadowP {
+    box-shadow: $shadow-color;
+  } @else {
+    box-shadow: 10px 10px 103px 8px rgba(76, 76, 76, 0.63);
+  }
+}
+@mixin background-bottom {
+  background-color: $secondary;
+}
+@mixin franja {
+  background-color: $primary;
+  border-radius: 39px;
+  padding: 10px;
+  transform: skew(5deg, -6deg);
+  max-width: 70%;
+  position: relative;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  color: $text-color;
+  background-color: $bg-body;
+}
+::placeholder, .form-control::placeholder{
+  color: $text-color;
+  font-size: 0.8rem;
+}
+.capa-black {
+  background-color: rgba($black, 50%);
+}
+.button {
+  padding: 1rem 2rem;
+}
+.btndown {
+  background: transparent;
+  color: $white;
+  font-size: 2rem;
+  &:hover{
+    color: $primary;
+  }
+}
+.btn-enviar{
+  transform: translate(0px, 20px);
+}
+.bg-video-container {
+  &:before {
+    background: rgba($black, 60%);
+  }
+}
+.back-white {
+  background: $white;
+}
+.back-black {
+  background: $black;
+}
+.btn-play {
+  color: $white;
+  font-size: 9rem;
+  &:hover, &:focus {
+    color: $primary;
+    transition: 1s;
+  }
+}
+.btn-submit{
+  background-color: transparent;
+  &:focus{
+    box-shadow: none;
+  }
+}
+.error{
+  color: $red !important;
+}
+.cd-timer {
+  color: $primary;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.fixed-bottom {
+  .navbar-nav {
+    .nav-link {
+      color: $grey-black;
+      font-weight: 600;
+    }
+    .nav-link.active {
+      background-color: $primary;
+      &:focus, &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}
+.btn-agenda {
+  background-color: $secondary;
+  margin: 0px !important;
+  padding: 16px 5px;
+  border-radius: 0 0 20px 20px;
+  .nav-link {
+    color: $white !important;
+    font-size: 1.1rem;
+  }
+}
+.borders {
+  position: relative;
+  &::before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 5px solid $primary;
+    width: 70%;
+    height: 70%;
+  }
+}
+.borders-right {
+  position: relative;
+  &::after {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 5px solid $primary;
+    width: 70%;
+    height: 70%;
+  }
+}
+.color-primary{
+  color: $primary;
+}
+.bold{
+  font-weight: bold;
+}
+
+.img-shadow {
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px rgba($black, 37%);
+}
+.img-cover{
+  height: 100%;
+object-fit: revert;
+object-position: center;
+transform: translate(-50px, 0px);
+}
+.line-border {
+  &::after {
+    content: "";
+
+    position: absolute;
+    background-color: $primary;
+    width: 3px;
+    height: 60%;
+    bottom: 20%;
+    top: 20%;
+    right: 0px;
+  }
+}
+.navbar-toggler{
+  background-color: $secondary;
+}
+.back-top{
+  background: $primary !important;
+  &::before{
+    background: $primary !important;
+  }
+}
+#ourhome {
+  h2 {
+    .text-1 {
+      font-size: 2.6rem;
+      text-shadow: rgba(0, 0, 6, 40%);
+    }
+    .text-2 {
+      font-size: 3.6rem;
+      color: $primary;
+      text-shadow: rgba(0, 0, 6, 40%);
+    }
+  }
+}
+#oportunidad {
+  .heading-title {
+    .subtitle-1 {
+      color: $secondary;
+      font-weight: bold;
+      font-size: 2rem;
+      text-transform: none;
+    }
+    h2 {
+      color: $primary;
+      font-weight: bold;
+    }
+    .subtitle-2 {
+      color: $secondary;
+      text-transform: none;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+    .subtitle-3 {
+      color: $text-color;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+  p {
+    font-size: 1.1rem;
+  }
+}
+#crecimiento {
+  -webkit-box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.16);
+
+  &::before,
+  &::after {
+    content: " ";
+    display: block;
+    border: 2px solid $primary;
+    border-radius: 8px;
+    width: 50%;
+    margin: auto;
+  }
+  h2 {
+    color: $secondary;
+    font-weight: bold;
+    font-size: 2.4rem;
+  }
+  h3 {
+    color: $primary;
+    font-weight: bold;
+    font-size: 3.1rem;
+  }
+  .text-count {
+    color: $secondary;
+    h4 {
+      font-weight: bold;
+    }
+  }
+  .p-text-footer {
+    p {
+      color: $text-blue-light;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+  }
+}
+#conferencistas {
+  .subtitle-1,
+  .subtitle-2 {
+    color: $secondary;
+    font-weight: bold;
+  }
+  .subtitle-2 {
+    font-size: 1.7rem;
+  }
+  .title {
+    color: $primary;
+    font-size: 4rem;
+    font-weight: bold;
+    @include text-shadow();
+  }
+  .list-conferencista {
+    font-weight: bold;
+    line-height: 34px;
+    font-size: 1.1rem;
+    ul {
+      li {
+        a {
+          &:hover {
+            transition: 1s;
+            &::after {
+              content: " >";
+
+              font-weight: lighter;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  .title-conferecista{
+    font-size: 2rem;
+  }
+  .sub-title-conferecista{
+    &::before, &::after{
+      content: " | ";
+    }  
+  }
+  .descrp-conferencista {
+    position: absolute;
+    bottom: 0%;
+    left: 23%;
+    transform: translate(7%, -20%);
+ 
+    background-color: rgba($white, 95%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba($black, 40%);
+  }
+  .cbp-l-filters .cbp-filter-item{
+    display: block;
+    span{
+      background: transparent;
+      color: $text-color;
+      border: none;
+      font-size: 1rem;
+      &:hover {
+        transition: 1s;
+        &::after {
+          content: " >";
+          font-weight: lighter;
+        }
+      }
+    }
+  }
+  .cbp-filter-item-active{
+    span{
+      text-decoration: underline;
+      color: $secondary !important;
+    }
+  }
+}
+
+#temas{
+  .subtitle-1,
+  .subtitle-2 {
+    color: $secondary;
+    font-weight: bold;
+  }
+  .subtitle-2 {
+    font-size: 1.4rem;
+  }
+  .title {
+    color: $primary;
+    font-size: 3.2rem;
+    font-weight: bold;
+    @include text-shadow();
+  }
+  .horarios{
+    h5{
+      span{
+        font-weight: bold;
+      }
+      font-weight: 600;
+    }
+  }
+}
+#agendate{
+  .subtitle-1,
+  .subtitle-2 {
+    color: $secondary;
+    font-weight: bold;
+  }
+  .subtitle-2 {
+    font-size: 1.9rem;
+  }
+  .subtitle-1{
+    font-size: 1.3rem;
+  }
+  .title {
+    color: $primary;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    @include text-shadow();
+  }
+  .text-agendate{
+    p{
+      font-size: 1.1rem;
+    }
+   
+  }
+  .agendate-form{
+   box-shadow: 0px 0px 25px rgba($black, 20%);
+   border-radius: 20px;
+   .form-control{
+     
+      border-bottom: 1px solid #ccc;
+      border-left: 0px;
+      border-right: 0px;
+      border-top: 0px;
+      border-radius: 1px;
+   
+   }
+  }
+  .bloque1{
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px rgba($black, 25%);
+    padding: 3%;
+  }
+}
+.counters {
+  .count_nums {
+    font-size: 3.6rem;
+    color: $primary;
+  }
+}
+@import "responsive";
